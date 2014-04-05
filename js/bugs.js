@@ -266,9 +266,11 @@ function onFrame(event) {
 $('.twitter').mouseover(function () {
   isTwitter = !isTwitter;
   groupTogether = !groupTogether;
+  return false;
 }).mouseout(function() {
   isTwitter = !isTwitter;
   groupTogether = !groupTogether;
+  return false
 });
 
 $('.github').mouseover(function () {
@@ -287,11 +289,3 @@ $('.path').mouseover(function () {
   isPath = !isPath;
   groupTogether = !groupTogether;
 });
-
-function onKeyDown(event) {
-  if (event.key == 'space') {
-    var layer = project.activeLayer;
-    layer.selected = !layer.selected;
-    return false;
-  }
-}
