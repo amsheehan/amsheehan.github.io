@@ -221,7 +221,7 @@ for (var i = 0; i < 40; i++) {
 }
 
 function updatePoint(event) {
-  //TODO
+
 }
 
 function onFrame(event) {
@@ -238,9 +238,11 @@ function onFrame(event) {
 
 // SET LOCATION
 $('.twitter').mouseover(function () {
-//  pathXOffset = $('.twitter').offset().left;
-//  pathYOffset = $('.twitter').offset().top;  
-  
+  pathXOffset = $('.twitter').offset().left;
+  pathYOffset = $('.twitter').offset().top;  
+
+  updatePoint(twitter);
+
   groupTogether = !groupTogether;
 
 }).mouseout(function() {

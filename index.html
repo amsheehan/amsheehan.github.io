@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style/canvas.css">
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:100,300' rel='stylesheet' type='text/css'>
     <script src="js/jquery-2.0.2.min.js"></script>
     <script src="js/paper.js"></script>
     <script type="text/paperscript" src="js/bugs.js" canvas="thisCanvas"></script>
@@ -14,57 +15,46 @@
   <body>
     
     <canvas id="thisCanvas" data-paper-resize="true" data-paper-keepalive="true"></canvas>
-
     <div class="content">
       <header>
-        <div class="title left">
-          <h1>Alex Sheehan</h1>
-        </div>
-      
-        <nav class="left">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="http://8bitdairyland.com">Podcast</a></li>
-            <li class="work-link"><a href="http://thehackerati.com">Work</a></li>
-          </ul>
-          <div class="clearfix">
-        </nav>
-
-        <div class="brand-icon-medium right">
+        <div class="brand-icon-medium">
           <img src="images/avatar/smallAvatarFilled.png" />
         </div>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="http://www.8bitdairyland.com">Podcast</a></li>
+            <li><a href="http://thehackerati.com">Work</a></li>
+          </ul>
+        </nav>
+        <h1>Alex Sheehan</h1>
       </header>
-
-      <div class="clearfix"></div>
 
       <div class="row-fluid">
         <a href="http://twitter.com/wrksonmymachine">
-          <div class="tile left twitter" id="twitter">
+          <div class="tile twitter" id="twitter">
             <img src="images/twitter.png" />
           </div>
         </a>
         <a href="https://github.com/amsheehan">
-          <div class="tile left github" id="github">
+          <div class="tile github" id="github">
             <img src="images/github.png" />
           </div>
         </a>
         <a href="http://amsheehan.tumblr.com">
-          <div class="tile left tumblr" id="tumblr">
+          <div class="tile tumblr" id="tumblr">
             <img src="images/tumblr.png" />
           </div>
         </a>
-        
-        <div class="clearfix"></div>
       </div>    
-    
+      
       <div class="flies-switch">
         <p><a href="#" onclick="turnOnFlies();">flies on</a> - <a href="#" onclick="turnOffFlies();">flies off</a></p>
       </div>
       
       <footer>
+        <p>Alex Sheehan, all rights reserved</p>
       </footer>
-
     </div>
-
   </body>
 </html>
