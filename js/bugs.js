@@ -212,6 +212,11 @@ var point = new Point(pathXOffset, pathYOffset);
 var size = new Size(340, 340);
 var rectPath = new Path.Rectangle(point, size);
 var boids = [];
+var isTwitter = false;
+var isGithub = false;
+var isPath = false;
+var groupTogether = false;
+var groupTogether = false;
 var groupTogether = false;
 var count = 0
 // Add the boids:
@@ -226,26 +231,60 @@ function updatePoint(event) {
 
 function onFrame(event) {
   for (var i = 0, l = boids.length; i < l; i++) {
-    if (groupTogether) {
+    if (groupTogether && isTwitter) {
+      var twitterPoint = new Point($('.twitter').offset().left, $('.twitter').offset().top);
+      rectPath = new Path.Rectangle(twitterPoint, size);
       var length = ((i + event.count / 40) % l) / l * rectPath.length;
       var point = rectPath.getPointAt(length);
       if (point)
         boids[i].arrive(point);
     }
+    
+    if (groupTogether && isGithub) {
+      var githubPoint = new Point($('.github').offset().left, $('.github').offset().top);
+      rectPath = new Path.Rectangle(githubPoint, size);
+      var length = ((i + event.count / 40) % l) / l * rectPath.length;
+      var point = rectPath.getPointAt(length);
+      if (point)
+        boids[i].arrive(point);
+    }
+    
+    if (groupTogether && isPath) {
+      var pathPoint = new Point($('.path').offset().left, $('.path').offset().top);
+      rectPath = new Path.Rectangle(pathPoint, size);
+      var length = ((i + event.count / 40) % l) / l * rectPath.length;
+      var point = rectPath.getPointAt(length);
+      if (point)
+        boids[i].arrive(point);
+    }
+    
     boids[i].run(boids);
   }
 }
 
 // SET LOCATION
 $('.twitter').mouseover(function () {
-  pathXOffset = $('.twitter').offset().left;
-  pathYOffset = $('.twitter').offset().top;  
+  isTwitter = !isTwitter;
+  groupTogether = !groupTogether;
+}).mouseout(function() {
+  isTwitter = !isTwitter;
+  groupTogether = !groupTogether;
+});
 
-  updatePoint(twitter);
+$('.github').mouseover(function () {
+  isGithub = !isGithub;
+  groupTogether = !groupTogether;
+}).mouseout(function() {
+  isGithub = !isGithub;
+  groupTogether = !groupTogether;
+});
 
+$('.path').mouseover(function () {
+  isPath = !isPath;
   groupTogether = !groupTogether;
 
 }).mouseout(function() {
+  isPath = !isPath;
   groupTogether = !groupTogether;
 });
 
