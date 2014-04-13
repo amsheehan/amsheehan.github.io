@@ -74,9 +74,14 @@ nav {
   display: inline-block;
   width: 280px;
   height: 280px;
-  background-color: yellow;
+  background-image: url('../images/cellbg-3.png');
   margin-top: 4%;
   margin-right: 5%;
+  transition: all 0.25s linear;
+}
+
+.tile:hover {
+  background-image: url('../images/cellbg-2');
 }
 
 .tile img {
