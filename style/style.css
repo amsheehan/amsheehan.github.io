@@ -81,7 +81,7 @@ nav {
 }
 
 .tile:hover {
-  background-image: url('../images/cellbg-2');
+  background-image: url('../images/cellbg-2.png');
 }
 
 .tile img {
