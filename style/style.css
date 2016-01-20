@@ -37,9 +37,37 @@ p {}
 body {}
 
 header {
+  display: flex;
   width: 100%;
   padding-top: 2em;
   text-align: center;
+}
+
+.left-side-header {
+  flex: 1;
+}
+
+.right-side-header {
+  flex: 1;
+}
+
+.fwd-icon-container {
+  display: inline-block;
+  width: 200px;
+  margin-left: 25px;
+  padding: 0 20px;
+  background-color: #4a4a4a;
+  border-radius: 2px;
+}
+
+.fwd-icon-image{
+  height: 50px;
+  padding: 0 20px;
+  background-repeat: no-repeat;
+  background-color: #4a4a4a;
+  background-image: url(../images/fwd-header-logo.png);
+  background-size: contain;
+  background-position: center;
 }
 
 header h1 {
@@ -53,7 +81,6 @@ nav {
 }
 
 .brand-icon-medium {
-  width: 15%;
   display: inline-block;
 }
 
